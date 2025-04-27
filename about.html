@@ -1,11 +1,45 @@
-<div id="nav-placeholder"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Data Launchpad - Home</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
+<body class="w3-light-grey">
+
+<!-- Sidebar Nav Begins -->
+<div id="sidebar-placeholder"></div>
+<!-- Sidebar Nav Ends -->
+<!-- Main content -->
+<div class="w3-main" style="margin-left:250px; margin-bottom:50px;">
+  <div class="w3-container">
+    <h1>About</h1>
+    <p>Explore, Learn, Build.</p>
+  </div>
+</div>
+
+<!-- Bottom nav begins -->
+<div id="bottomnav-placeholder"></div>
+<!-- Bottom nav ends -->
+  
+<!-- Nav script begins -->
 <script>
-fetch('/nav.html')
+// Load sidebar
+fetch('/sidebar.html')
   .then(response => response.text())
   .then(data => {
-    document.getElementById('nav-placeholder').innerHTML = data;
+    document.getElementById('sidebar-placeholder').innerHTML = data;
+  });
+
+// Load bottom navigation
+fetch('/bottomnav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('bottomnav-placeholder').innerHTML = data;
   });
 </script>
-
-<h2> Hey</h2>
+<!-- Nav script ends -->
+</body>
+</html>
