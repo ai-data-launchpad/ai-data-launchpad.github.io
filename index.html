@@ -9,9 +9,9 @@
 
 <body class="w3-light-grey">
 
-<!-- Sidebar goes at the top -->
+<!-- Sidebar Nav Begins -->
 <div id="sidebar-placeholder"></div>
-
+<!-- Sidebar Nav Ends -->
 <!-- Main content -->
 <div class="w3-main" style="margin-left:250px; margin-bottom:50px;">
   <div class="w3-container">
@@ -20,10 +20,11 @@
   </div>
 </div>
 
-<!-- Bottom nav goes just before end of body -->
+<!-- Bottom nav begins -->
 <div id="bottomnav-placeholder"></div>
-
-<!-- Script goes last -->
+<!-- Bottom nav ends -->
+  
+<!-- Nav script begins -->
 <script>
 // Load sidebar
 fetch('/sidebar.html')
@@ -39,6 +40,6 @@ fetch('/bottomnav.html')
     document.getElementById('bottomnav-placeholder').innerHTML = data;
   });
 </script>
-
+<!-- Nav script ends -->
 </body>
 </html>
