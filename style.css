@@ -12,7 +12,7 @@ body,h1,h2,h3,h4,h5,h6 {
   content: "\f111"; /* fa-chevron-right */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 0.7em; /* 🔵 Smaller size */
+  font-size: 0.5em; /* 🔵 Smaller size */
   display: inline-block;
   margin-right: 10px;
   color: #333333;
