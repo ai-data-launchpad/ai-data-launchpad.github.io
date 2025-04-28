@@ -9,7 +9,7 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 .w3-ul li::before {
-  content: "\f105"; /* fa-chevron-right */
+  content: "\f054"; /* fa-chevron-right */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   display: inline-block;
