@@ -15,6 +15,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <!-- Sidebar Nav Begins -->
 <div id="sidebar-placeholder"></div>
+<button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
 <!-- Sidebar Nav Ends -->
 <!-- !PAGE CONTENT BEGINS! -->
 <div class="w3-main" style="margin-left:300px; border-left: 1px solid #000000;"> 
@@ -69,6 +70,17 @@ fetch('/bottomnav.html')
   .then(data => {
     document.getElementById('bottomnav-placeholder').innerHTML = data;
   });
+</script>
+<script>
+// Open the sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+// Close the sidebar
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
 </script>
 <!-- Nav script ends -->
 </body>
