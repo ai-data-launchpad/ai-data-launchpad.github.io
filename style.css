@@ -1,0 +1,10 @@
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+.hover-icon-polish:hover i {
+  color: #2196F3;
+  text-shadow: 0 0 8px #2196F3;
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
