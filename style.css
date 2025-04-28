@@ -3,9 +3,18 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 
-.w3-ul li {
-  border-top: none;
-  border-bottom: none;
+.w3-ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.w3-ul li::before {
+  content: "\f105"; /* fa-chevron-right */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 10px;
+  color: #2196F3;
 }
 
 
