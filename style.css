@@ -48,29 +48,45 @@ body,h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 0.3px;
+  position: relative; /* required for custom arrow */
 }
 
 .accordionDrop {
   padding: 0px 30px;
-  border-top: 1px solid #ddd;
-  margin-top: 10px;
+  border-top: none;
+  margin-top: 0;
   padding-top: 10px;
 }
 
 ::-webkit-details-marker { 
   display: none;
-  }
+}
 
 summary {
   border: none;
   box-shadow: none;
   outline: none;
   display: block;
-  margin-bottom: 0;
+  margin: 0;
 }
 
+/* Custom toggle arrow */
+summary.accordion::after {
+  content: "➕";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: white;
+}
 
-/* Accordion CSS for white dropdown  end*/
+details[open] summary.accordion::after {
+  content: "➖";
+}
+
+/* Accordion CSS for white dropdown  end */
+
 
 
 
