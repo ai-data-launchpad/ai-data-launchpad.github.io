@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Customer Transformation Showcases</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 30px;
+      padding: 30px;
     }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
     .accordion {
-      background-color: #f2f2f2;
-      color: #333;
       cursor: pointer;
-      padding: 18px;
+      padding: 15px 20px;
       width: 100%;
-      text-align: left;
       border: none;
       outline: none;
+      text-align: left;
       font-size: 18px;
-      transition: 0.4s;
       font-weight: bold;
+      background-color: #f2f2f2;
+      transition: background-color 0.3s;
+      margin-bottom: 5px;
     }
 
     .accordion:hover {
-      background-color: #ddd;
+      background-color: #e0e0e0;
     }
 
     .panel {
-      padding: 0 18px 18px 18px;
       display: none;
-      background-color: white;
-      overflow: hidden;
+      background-color: #fff;
+      padding: 15px 20px;
       border-left: 4px solid #1a4d5d;
       margin-bottom: 10px;
     }
 
-    .example-row {
+    .example {
       display: flex;
       align-items: center;
       margin-top: 10px;
-      gap: 30px;
-    }
-
-    .dot-line {
-      display: flex;
-      align-items: center;
     }
 
     .circle {
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
       background-color: #1a4d5d;
       border-radius: 50%;
       margin-right: 10px;
@@ -59,49 +57,52 @@
       flex-grow: 1;
       height: 2px;
       background-color: #1a4d5d;
+      margin-left: 10px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-<h2>Customer Transformation Showcases</h2>
+  <h2>Customer Transformation Showcases</h2>
 
-<button class="accordion">Loan Processing Efficiency</button>
-<div class="panel">
-  <div class="example-row">
-    <div class="dot-line">
+  <button class="accordion">Loan Processing Efficiency</button>
+  <div class="panel">
+    <div class="example">
       <div class="circle"></div><div class="line"></div>
+      <span>Traditional: Manual review of applications, 3–5 day turnaround</span>
     </div>
-    <div>Traditional: Manual review of applications, 3–5 day turnaround</div>
-  </div>
-  <div class="example-row">
-    <div class="dot-line">
+    <div class="example">
       <div class="circle"></div><div class="line"></div>
+      <span>Modernized with AI Agents: Instant document extraction, 2-hour approval cycle</span>
     </div>
-    <div>Modernized with AI Agents: Instant document extraction, 2-hour approval cycle</div>
   </div>
-</div>
 
-<button class="accordion">Customer Service Automation</button>
-<div class="panel">
-  <div class="example-row">
-    <div class="dot-line">
+  <button class="accordion">Customer Service Automation</button>
+  <div class="panel">
+    <div class="example">
       <div class="circle"></div><div class="line"></div>
+      <span>Traditional: Tier-1 tickets resolved manually in 24 hours</span>
     </div>
-    <div>Traditional: Tier-1 tickets resolved by human agents over email in 24 hours</div>
-  </div>
-  <div class="example-row">
-    <div class="dot-line">
+    <div class="example">
       <div class="circle"></div><div class="line"></div>
+      <span>Modernized with AI Agents: Autonomous chat resolution within 5 minutes</span>
     </div>
-    <div>Modernized with AI Agents: Autonomous chat resolution and live escalation under 5 minutes</div>
   </div>
-</div>
 
-<script>
-  const acc = document.getElementsByClassName("accordion");
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      panel.style.display = p
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const panel = btn.nextElementSibling;
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
