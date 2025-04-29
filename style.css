@@ -59,7 +59,17 @@ body,h1,h2,h3,h4,h5,h6 {
 
 ::-webkit-details-marker { 
   display: none;
+  }
+
+summary {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  display: block;
+  margin-bottom: 0;
 }
+
+
 /* Accordion CSS for white dropdown  end*/
 
 
