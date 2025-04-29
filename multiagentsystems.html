@@ -1,1 +1,108 @@
-MultiAgent Systems
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<title>AI Data Launchpad - Multi-Agent Autonomous Systems </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <link rel="stylesheet" href="/style.css">
+</head>
+<body class="w3-content" style="max-width:1600px;">
+
+<!-- Sidebar Nav Begins -->
+<div id="sidebar-placeholder"></div>
+<!-- Sidebar Nav Ends -->
+<!-- !PAGE CONTENT BEGINS! -->
+<div class="w3-main" style="margin-left:300px; border-left: 1px solid #000000;"> 
+<!-- ---------------------------- -->
+<!-- Main content Begins No div  -->
+<!-- ---------------------------- -->  
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+  <!-- Header -->
+  <header >
+<span class="w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()"> <i class="fa fa-bars"></i> </span>
+   <div class="w3-container">
+     <h1>Multi-Agent Autonomous Systems</h1>
+    <p>Make business applications scalable, efficient, and cost-effective with AI-driven multi-agent architectures. </p>
+    </div>
+  </header>
+<!-- End Header -->
+<!-- -------- -->
+<div class="w3-container" style= "margin-top:30px; margin-bottom:30px;"> 
+<h3> About Multi-Agent Systems </h3>
+
+ 
+<h3> Hands-on Labs Overview  (Multi-Agent Systems) </h3>
+ <ul class="w3-ul w3-white w3-card-4 w3-hoverable margin-below">
+
+<li><span class="badge-highlight"> Data Cloud</span>:  Data Ingestion with CRM Connector, Data Harmonization, Profile Unification & Org Enrichment for customer 360.</li>
+  
+
+</ul> 
+<p>Workbooks for hands-on labs will be provided separately to registered participants. </p>
+<p> 
+The hands-on labs will be completed in the Orgs provided by Salesforce instructors. Customers will not connect their prod/sandboxes or data to the workshop orgs.
+</p>
+<h3> Example Multi-Agent System Architecture </h3>
+ <p> 
+   
+Hands-on labs allow participants to explore key stages of agent maturity — 
+from configuring agents to assist users using a company's knowledge base (using Data Library), to enabling autonomous action through Salesforce Flows and Apex.
+
+ </p>
+ 
+ <div class="w3-card w3-container w3-center w3-mobile w3-padding margin-below"> <img src="/images/agent-maturity-stages.jpg" style="max-width: 700px; width: 100%; height: auto; margin: auto;"> </div>
+
+
+ 
+
+
+ 
+</div>
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- ---------------------------- -->
+<!-- Main content Ends No div  -->
+<!-- ---------------------------- -->  
+<!-- Bottom nav begins -->
+<div id="bottomnav-placeholder"></div>
+<!-- Bottom nav ends -->
+<hr> <p style="margin-top:50px;"> &nbsp;</p> 
+</div> 
+<!-- !PAGE CONTENT ENDS! --> 
+  
+<!-- Nav script begins -->
+<script>
+// Load sidebar
+fetch('/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar-placeholder').innerHTML = data;
+  });
+
+// Load bottom navigation
+fetch('/bottomnav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('bottomnav-placeholder').innerHTML = data;
+  });
+</script>
+<script>
+// Open the sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+// Close the sidebar
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<!-- Nav script ends -->
+</body>
+</html>
