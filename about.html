@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<title>AI Data Launchpad - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <link rel="stylesheet" href="/style.css">
+</head>
+<body class="w3-content" style="max-width:1600px;">
+
+<!-- Sidebar Nav Begins -->
+<div id="sidebar-placeholder"></div>
+<!-- Sidebar Nav Ends -->
+<!-- !PAGE CONTENT BEGINS! -->
+<div class="w3-main" style="margin-left:300px; border-left: 1px solid #000000;"> 
+<!-- ---------------------------- -->
+<!-- Main content Begins No div  -->
+<!-- ---------------------------- -->  
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+  <!-- Header -->
+  <header >
+<span class="w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()"> <i class="fa fa-bars"></i> </span>
+
+  </header>
+<!-- End Header -->
+<!-- -------- -->
+<div class="w3-container" style= "margin-top:30px; margin-bottom:30px;"> 
+
+
+
+ <p> 
+Note: Content on this site is meant for demo/learning - not for production use. This is not an official Salesforce site/content. Please refer to official Salesforce documentation (at salesforce.com) for implemnentation guidance.
+</p>
+</div>
+ 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- --------  -------- - -------- - -------- - -------- - -------- - -------- ---> 
+<!-- ---------------------------- -->
+<!-- Main content Ends No div  -->
+<!-- ---------------------------- -->  
+<!-- Bottom nav begins -->
+<div id="bottomnav-placeholder"></div>
+<!-- Bottom nav ends -->
+ <hr> <p style="margin-top:50px;"> &nbsp;</p> </div> 
+<!-- !PAGE CONTENT ENDS! --> 
+  
+<!-- Nav script begins -->
+<script>
+// Load sidebar
+fetch('/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar-placeholder').innerHTML = data;
+  });
+
+// Load bottom navigation
+fetch('/bottomnav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('bottomnav-placeholder').innerHTML = data;
+  });
+</script>
+<script>
+// Open the sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+// Close the sidebar
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<!-- Nav script ends -->
+</body>
+</html>
