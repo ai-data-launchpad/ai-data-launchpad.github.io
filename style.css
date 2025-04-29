@@ -38,24 +38,38 @@ body,h1,h2,h3,h4,h5,h6 {
 
 .accordion {
   background: #336699;
-  border: 1px solid #F1F0FF;
-  border-radius: 5px;
+  border: none;
+  border-radius: 6px;
   font-weight: 700;
-  margin: 10px;
-  margin-bottom: 15px;
-  padding: 10px 20px;
+  margin: 10px 0;
+  padding: 15px 20px;
   cursor: pointer;
-  font-size: 130%;
+  font-size: 1.2rem;
   color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
+/* Arrow toggle */
+.accordion::after {
+  content: "▶";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+details[open] .accordion::after {
+  content: "▼";
+}
+
+/* Panel styling */
 .accordionDrop {
-  padding: 0px 30px;
+  padding: 15px 25px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-::-webkit-details-marker { 
-  display: none;
-}
 /* Accordion CSS for white dropdown  end*/
 
 
