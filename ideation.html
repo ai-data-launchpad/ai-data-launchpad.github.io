@@ -146,22 +146,39 @@ function w3_close() {
 <!-- Nav script ends -->
 
 <!-- PDF Generator Script Begins -->
-  <script>
+<script>
   document.getElementById("myForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent form from refreshing
+    e.preventDefault(); // Prevent form refresh
 
     const form = e.target;
-    const name = form.name.value;
-    const lesson = form.lesson.value;
-
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    doc.text(`Name: ${name}`, 10, 10);
-    doc.text(`What you learned:`, 10, 20);
-    doc.text(lesson, 10, 30);
+    const fields = [
+      ["Name", form.name.value],
+      ["Application Description", form.application.value],
+      ["User Experience", form.ux.value],
+      ["Pain Points", form.pain.value],
+      ["Business Cost", form.cost.value],
+      ["Proposed Solutions", form.solution.value],
+      ["Revenue Impact", form.roi.value],
+      ["Productivity Impact", form.productivity.value],
+      ["Time to Value", form.timeframe.value],
+      ["Next Steps", form.nextsteps.value],
+      ["Implementation Requirements", form.howto.value]
+    ];
 
-    doc.save("answers.pdf");
+    let y = 10;
+
+    fields.forEach(([label, value]) => {
+      doc.text(`${label}:`, 10, y);
+      y += 7;
+      const lines = doc.splitTextToSize(value, 180);
+      doc.text(lines, 10, y);
+      y += lines.length * 7 + 5;
+    });
+
+    doc.save("ideation-summary.pdf");
   });
 </script>
 <!-- PDF Generator Script Ends -->
