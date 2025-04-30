@@ -39,53 +39,24 @@ body,h1,h2,h3,h4,h5,h6 {
 .accordion {
   background: #336699;
   border: 1px solid #F1F0FF;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-weight: 700;
   margin: 10px;
   margin-bottom: 15px;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 130%;
   color: white;
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.3px;
-  position: relative; /* required for custom arrow */
 }
 
 .accordionDrop {
   padding: 0px 30px;
-  border-top: none;
-  margin-top: 0;
-  padding-top: 10px;
 }
 
 ::-webkit-details-marker { 
   display: none;
 }
-
-summary {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  display: block;
-  margin: 0;
-}
-
-/* Custom toggle arrow */
-summary.accordion::after {
-  content: "➕";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  color: white;
-}
-
-details[open] summary.accordion::after {
-  content: "➖";
-}
-
-/* Accordion CSS for white dropdown  end */
+/* Accordion CSS for white dropdown  end*/
 
 
 
